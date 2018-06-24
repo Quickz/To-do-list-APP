@@ -1,0 +1,15 @@
+
+
+
+/* adding margin */
+.margin-1 {
+    -fx-padding: 10px;
+    -fx-border-insets: 10px;
+    -fx-background-insets: 10px;
+}
+
+.margin-0-1-1-1 {
+    -fx-padding: 0px 10px 10px 10px;
+    -fx-border-insets: 0px 10px 10px 10px;
+    -fx-background-insets: 0px 10px 10px 10px;
+}

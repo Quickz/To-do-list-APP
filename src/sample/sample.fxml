@@ -1,0 +1,34 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ListCell?>
+<BorderPane
+    fx:id="content"
+    fx:controller="sample.Controller"
+    xmlns:fx="http://javafx.com/fxml">
+
+    <center>
+        <ListView fx:id="toDoList" styleClass="margin-1" prefWidth="300" prefHeight="200">
+            <Label>Do Math</Label>
+            <Label>Exercise</Label>
+            <Label>Sleep</Label>
+        </ListView>
+    </center>
+
+    <bottom>
+
+        <HBox spacing="10" alignment="center" styleClass="margin-0-1-1-1">
+
+            <Button fx:id="addButton" onAction="#addEntry">Add</Button>
+            <Button fx:id="removeButton" onAction="#removeEntry">Remove</Button>
+
+        </HBox>
+
+    </bottom>
+
+
+</BorderPane>
