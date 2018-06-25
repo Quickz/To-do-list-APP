@@ -51,7 +51,6 @@ public class ListEntry
 
     public void onEnter()
     {
-        System.out.println("enter");
         ok();
     }
 
@@ -63,7 +62,7 @@ public class ListEntry
         }
     }
 
-    /*
+    /**
      * generates a window with an input field
      * for a new list entry
      * returns the input field contents

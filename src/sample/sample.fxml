@@ -12,11 +12,7 @@
     xmlns:fx="http://javafx.com/fxml">
 
     <center>
-        <ListView fx:id="toDoList" styleClass="margin-1" prefWidth="300" prefHeight="200">
-            <Label>Do Math</Label>
-            <Label>Exercise</Label>
-            <Label>Sleep</Label>
-        </ListView>
+        <ListView fx:id="toDoList" styleClass="margin-1" prefWidth="300" prefHeight="200" />
     </center>
 
     <bottom>
