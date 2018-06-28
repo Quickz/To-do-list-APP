@@ -6,10 +6,27 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.ListCell?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
 <BorderPane
     fx:id="content"
     fx:controller="sample.Controller"
     xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="Import..."/>
+                <MenuItem text="Export..."/>
+                <MenuItem text="Exit"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem text="License"/>
+                <MenuItem text="About"/>
+            </Menu>
+        </MenuBar>
+    </top>
 
     <center>
         <ListView fx:id="toDoList" styleClass="margin-1" prefWidth="300" prefHeight="200" />
