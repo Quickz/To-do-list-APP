@@ -19,7 +19,7 @@
             <Menu text="File">
                 <MenuItem text="Import..."/>
                 <MenuItem text="Export..."/>
-                <MenuItem text="Exit"/>
+                <MenuItem text="Exit" onAction="#exit"/>
             </Menu>
             <Menu text="Help">
                 <MenuItem text="License"/>

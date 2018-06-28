@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.lang.reflect.Array;
@@ -166,4 +167,10 @@ public class Controller
         }
     }
 
+    @FXML
+    private void exit()
+    {
+        Stage stage = (Stage)content.getScene().getWindow();
+        stage.close();
+    }
 }
