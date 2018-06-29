@@ -168,6 +168,12 @@ public class Controller
     }
 
     @FXML
+    private void openAboutPage() throws Exception
+    {
+        AboutPage.generate();
+    }
+
+    @FXML
     private void exit()
     {
         Stage stage = (Stage)content.getScene().getWindow();

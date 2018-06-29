@@ -23,7 +23,7 @@
             </Menu>
             <Menu text="Help">
                 <MenuItem text="License"/>
-                <MenuItem text="About"/>
+                <MenuItem text="About" onAction="#openAboutPage"/>
             </Menu>
         </MenuBar>
     </top>
