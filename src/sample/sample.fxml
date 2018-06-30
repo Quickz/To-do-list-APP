@@ -22,7 +22,7 @@
                 <MenuItem text="Exit" onAction="#exit"/>
             </Menu>
             <Menu text="Help">
-                <MenuItem text="License"/>
+                <MenuItem text="License" onAction="#openLicensePage"/>
                 <MenuItem text="About" onAction="#openAboutPage"/>
             </Menu>
         </MenuBar>

@@ -168,6 +168,12 @@ public class Controller
     }
 
     @FXML
+    private void openLicensePage() throws Exception
+    {
+        LicensePage.generate();
+    }
+
+    @FXML
     private void openAboutPage() throws Exception
     {
         AboutPage.generate();
