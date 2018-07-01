@@ -17,10 +17,14 @@
     </padding>
 
     <top>
-        <Label wrapText="true">
-            A very basic todo list application made using JavaFX technology.
-            Source code can be found at https://github.com/Quickz/To-do-list-APP
-        </Label>
+        <VBox>
+            <Label wrapText="true">
+                A very basic todo list application made using JavaFX technology.
+            </Label>
+            <Hyperlink onAction="#openSourceCode">
+                Source Code
+            </Hyperlink>
+        </VBox>
     </top>
 
 </BorderPane>
