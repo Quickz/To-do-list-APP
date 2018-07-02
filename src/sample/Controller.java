@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -71,13 +72,25 @@ public class Controller
      **/
     private void loadItems()
     {
+        loadToDoList(listFilePath + "/data.txt");
+    }
+
+    /**
+     * loads a to do list from a specified file
+     *
+     **/
+    private void loadToDoList(String path)
+    {
         FileReader reader = null;
         BufferedReader bufferedReader = null;
 
         try
         {
-            reader = new FileReader(listFilePath + "/data.txt");
+            reader = new FileReader(path);
             bufferedReader = new BufferedReader(reader);
+
+            // clearing stuff before adding new
+            toDoList.getItems().clear();
 
             String line;
             ObservableList<String> items = toDoList.getItems();
@@ -165,6 +178,27 @@ public class Controller
                 System.out.println("Error in closing a file after writing");
             }
         }
+    }
+
+    @FXML
+    private void importToDoList()
+    {
+        Stage fileDialogStage = new Stage();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Export");
+        File file = fileChooser.showOpenDialog(fileDialogStage);
+
+        if (file != null)
+        {
+            loadToDoList(file.getPath());
+            saveItems();
+        }
+    }
+
+    @FXML
+    private void exportToDoList()
+    {
+        System.out.println("exporting..");
     }
 
     @FXML

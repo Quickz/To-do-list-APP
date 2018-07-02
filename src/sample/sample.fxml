@@ -17,7 +17,7 @@
     <top>
         <MenuBar>
             <Menu text="File">
-                <MenuItem text="Import..."/>
+                <MenuItem text="Import..." onAction="#importToDoList"/>
                 <MenuItem text="Export..."/>
                 <MenuItem text="Exit" onAction="#exit"/>
             </Menu>
