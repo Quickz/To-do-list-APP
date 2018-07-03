@@ -131,21 +131,30 @@ public class Controller
      */
     private void saveItems()
     {
+        File file = new File(listFilePath);
+        boolean directoryDoesntExist = file.mkdirs();
+        if (directoryDoesntExist)
+        {
+            System.out.println(
+                    "Couldn't find an existing directory. " +
+                            "Creating a new one.");
+        }
+
+        saveToDoList(listFilePath + "/data.txt");
+    }
+
+    /**
+     * saves the to do list to a specified file
+     *
+     **/
+    private void saveToDoList(String path)
+    {
         FileWriter writer = null;
         BufferedWriter bufferedWriter = null;
 
         try
         {
-            File file = new File(listFilePath);
-            boolean directoryDoesntExist = file.mkdirs();
-            if (directoryDoesntExist)
-            {
-                System.out.println(
-                    "Couldn't find an existing directory. " +
-                    "Creating a new one.");
-            }
-
-            writer = new FileWriter(listFilePath + "/data.txt");
+            writer = new FileWriter(path);
             bufferedWriter = new BufferedWriter(writer);
 
             ObservableList<String> items = toDoList.getItems();
@@ -185,7 +194,7 @@ public class Controller
     {
         Stage fileDialogStage = new Stage();
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Export");
+        fileChooser.setTitle("Import");
         File file = fileChooser.showOpenDialog(fileDialogStage);
 
         if (file != null)
@@ -198,7 +207,19 @@ public class Controller
     @FXML
     private void exportToDoList()
     {
-        System.out.println("exporting..");
+        Stage fileDialogStage = new Stage();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Export");
+        fileChooser.getExtensionFilters().add(
+                new FileChooser.ExtensionFilter(
+                        "Text Documents (*.txt)", ".txt"));
+
+        File file = fileChooser.showSaveDialog(fileDialogStage);
+
+        if (file != null)
+        {
+            saveToDoList(file.getPath());
+        }
     }
 
     @FXML
