@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -64,6 +66,14 @@ public class Controller
         }
     }
 
+    @FXML
+    private void onDelete(KeyEvent e)
+    {
+        if (e.getCode() == KeyCode.DELETE)
+        {
+            removeEntry();
+        }
+    }
 
     /**
      * loads to do list items

@@ -29,7 +29,12 @@
     </top>
 
     <center>
-        <ListView fx:id="toDoList" styleClass="margin-1" prefWidth="300" prefHeight="200" />
+        <ListView
+                fx:id="toDoList"
+                styleClass="margin-1"
+                prefWidth="300"
+                prefHeight="200"
+                onKeyReleased="#onDelete"/>
     </center>
 
     <bottom>
