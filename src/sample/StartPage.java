@@ -16,7 +16,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Controller
+public class StartPage
 {
     public BorderPane content;
     public ListView<String> toDoList;

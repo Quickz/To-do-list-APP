@@ -71,7 +71,7 @@ public class ListEntry
     public static String generate() throws Exception
     {
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(Main.class.getResource("list_entry.fxml"));
+        fxmlLoader.setLocation(Main.class.getResource("ListEntry.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = new Stage();
         stage.initModality(Modality.APPLICATION_MODAL);

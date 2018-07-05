@@ -11,7 +11,7 @@
 <?import javafx.scene.control.MenuItem?>
 <BorderPane
     fx:id="content"
-    fx:controller="sample.Controller"
+    fx:controller="sample.StartPage"
     xmlns:fx="http://javafx.com/fxml">
 
     <top>
